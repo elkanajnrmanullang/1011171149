@@ -12,3 +12,4 @@ document.addEventListener('DOMContentLoaded', function () {
             : 'fa-solid fa-bars';
     }
 });
+
