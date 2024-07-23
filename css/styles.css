@@ -21,6 +21,7 @@ li {
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 1;
 }
 
 .header a:hover {
@@ -30,21 +31,27 @@ li {
 .navbar {
   width: 100%;
   height: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(254, 252, 252, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .navbar .logo a {
   font-size: 1.5rem;
   font-weight: bold;
+  color: white; 
 }
 
 .navbar .links {
   display: flex;
   gap: 2rem;
+  color: white;
 }
 
 .navbar .toggle_btn {
@@ -88,6 +95,7 @@ li {
   border-radius: 10px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 20;
 }
 
 .dropdown_menu.open {
@@ -185,6 +193,8 @@ li {
 
 .slider .list .item .content .description{
   font-size: 15px;
+  padding-right: 30%;
+  text-align: justify;
 }
 
 .slider .list .item .content .button{
@@ -242,6 +252,7 @@ li {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 40px;
 }
 
 .nextPrevArrows button{
@@ -259,5 +270,139 @@ li {
 .nextPrevArrows button:hover{
   background-color: #fff;
   color: #000;
+}
+
+/* =========== ANIMASI BANNER =========== */
+.slider .list .item:nth-child(1){
+  z-index: 1;     
+}
+
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .button{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards; 
+}
+
+@keyframes showContent{
+  to{
+    transform: translateY(0px);
+    filter: blur(00px);
+    opacity: 1;
+  }
+}
+
+.slider .list .item:nth-child(1) .content .title{
+  animation-delay: 0.4s;
+}
+
+.slider .list .item:nth-child(1) .content .type{
+  animation-delay: 0.6s;
+}
+
+.slider .list .item:nth-child(1) .content .description{
+  animation-delay: 0.8s;
+}
+
+.slider .list .item:nth-child(1) .content .button{
+  animation-delay: 1s;
+}
+
+.slider .list .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage{
+  to{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.slider .next .thumbnail .item:nth-child(1){
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.slider .prev .list .item img{
+  z-index: 100;
+}
+
+@keyframes showThumbnail{
+  from{
+    width: 0;
+    opacity: 0;
+  }
+}
+
+.slider .next .thumbnail{
+  animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+  from{
+    transform: translateX(150px);
+  }
+}
+
+/* ANIMATION BUTTON CLICK */
+.slider.prev .list .item:nth-child(2){
+  z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: outFrame 0.5s linear 1 forwards;
+}
+
+@keyframes outFrame{
+  to{
+    width: 150px;
+    height: 220px;
+    bottom: 50px;
+    border-radius: 20px;
+  }
+}
+
+.slider.prev .thumbnail.item:nth-child(1){
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+
+@keyframes contentOut{
+  to{
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 678px){
+  .slider .list .item .content{
+    padding-right: 30%;
+  }
+
+  .slider .list .item .content .title{
+    font-size: 30px;
+  }
+
+  .nextPrevArrows{
+    padding: 40px 0;
+  }
 }
 
