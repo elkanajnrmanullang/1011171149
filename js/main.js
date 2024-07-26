@@ -1,15 +1,13 @@
-//NAV MENU
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.querySelector('.toggle_btn');
-    const toggleBtnIcon = document.querySelector('.toggle_btn i');
-    const dropDownMenu = document.querySelector('.dropdown_menu');
-
-    toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open');
-        const isOpen = dropDownMenu.classList.contains('open');
-        toggleBtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'
-            : 'fa-solid fa-bars';
-    }
-});
-
+//SWIPER SLIDER
+var swiper = new Swiper(".bg-slider-thumbs", {
+    loop: true,
+    spaceBetween: 0,
+    slidesPerView: 0,
+  });
+  var swiper2 = new Swiper(".bg-slider", {
+    loop: true,
+    spaceBetween: 0,
+    thumbs: {
+      swiper: swiper,
+    },
+  });
