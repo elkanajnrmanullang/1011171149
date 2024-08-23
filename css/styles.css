@@ -345,8 +345,85 @@ span {
 }
 
 /* =========== DESTINATION ========== */
+.destination {
+  margin: 50px 0 50px 0;
+  background: #0108;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.container-dst {
+  max-width: 100%;
+  width: 100%;
+  padding: 40px 40px;
+}
+
+.container-dst .title-dst{
+  margin-left: 50px;
+  font-size: 3em;
+}
+
+.slide-container-dst {
+  margin: 30px 50px;
+  overflow: hidden;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.card .image-box {
+  height: 250px;
+}
+
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.card .dst-details {
+  position: absolute;
+  top: 70%;
+  color: white;
+  padding: 15px;
+  column-gap: 12px;
+  align-items: center;
+  display: flex;
+}
+
+.card .dst-details img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dst-details .name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.dst-details .read-more-dst {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  font-style: italic;
+}
 
 /* ========== RESPONSIVE ========== */
+@media screen and (min-width: 320px) {
+  .container-dst {
+    padding: 40px 0;
+  }
+
+  .card .dst-details {
+    top: 60%;
+  }
+}
+
 @media screen and (min-width: 785px) and (max-width: 1100px) {
   header .nav-bar {
     padding: 0 50px;
@@ -586,4 +663,11 @@ span {
   span {
     font-size: 10px;
   }
+
+  .container-dst .title-dst{
+    margin-left: 50px;
+    font-size: 25px;
+  }
+
+  
 }
