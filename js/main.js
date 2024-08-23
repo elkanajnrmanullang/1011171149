@@ -32,11 +32,3 @@ closeBtn.addEventListener("click", () => {
 });
 
 //Image Slider
-var swiper = new Swiper(".destination", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
