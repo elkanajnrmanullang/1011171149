@@ -61,3 +61,33 @@ var swiper = new Swiper(".slide-container-dst", {
     },
   }
 });
+
+// FILTER PAGE WISATA
+// Ambil semua tombol filter dan kartu yang dapat difilter
+const filterButtons = document.querySelectorAll(".filter button");
+const filterableCards = document.querySelectorAll(".box-cards-blog .card");
+
+// Fungsi untuk memfilter kartu
+const filterCards = (e) => {
+    // Hapus kelas "active" dari tombol yang saat ini aktif
+    const activeButton = document.querySelector(".active");
+    if (activeButton) {
+        activeButton.classList.remove("active");
+    }
+
+    // Tambahkan kelas "active" ke tombol yang diklik
+    e.currentTarget.classList.add("active");
+
+    // Loop melalui semua kartu dan tambahkan atau hapus kelas "hide"
+    filterableCards.forEach(card => {
+        card.classList.add("hide");
+
+        // Jika kategori kartu cocok dengan kategori tombol atau tombol "All" dipilih
+        if (card.dataset.name === e.currentTarget.dataset.name || e.currentTarget.dataset.name === "all") {
+            card.classList.remove("hide");
+        }
+    });
+};
+
+// Tambahkan event listener ke setiap tombol filter
+filterButtons.forEach(button => button.addEventListener("click", filterCards));
