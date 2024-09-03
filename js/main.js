@@ -41,53 +41,49 @@ var swiper = new Swiper(".slide-container-dst", {
   centerSlider: "true",
   fade: "true",
   grabCursor: "true",
-  // loopFillGrouwithBlank: true, 
+  // loopFillGrouwithBlank: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  breakpoints:{
-    0:{
+  breakpoints: {
+    0: {
       slidesPerView: 1,
     },
-    520:{
+    520: {
       slidesPerView: 2,
     },
-    768:{
+    768: {
       slidesPerView: 3,
     },
-    1000:{
+    1000: {
       slidesPerView: 4,
     },
-  }
+  },
 });
 
 // FILTER PAGE WISATA
-// Ambil semua tombol filter dan kartu yang dapat difilter
-const filterButtons = document.querySelectorAll(".filter button");
-const filterableCards = document.querySelectorAll(".box-cards-blog .card");
+$(".button-group").on("click", ".button-filter", function () {
+  var filterValue = $(this).attr("data-filter");
 
-// Fungsi untuk memfilter kartu
-const filterCards = (e) => {
-    // Hapus kelas "active" dari tombol yang saat ini aktif
-    const activeButton = document.querySelector(".active");
-    if (activeButton) {
-        activeButton.classList.remove("active");
-    }
+  // Jika filterValue adalah "*", tampilkan semua elemen
+  if (filterValue === "*") {
+    $(".box-cards-blog .card").show();
+  } else {
+    // Sembunyikan semua elemen
+    $(".box-cards-blog .card").hide();
 
-    // Tambahkan kelas "active" ke tombol yang diklik
-    e.currentTarget.classList.add("active");
+    // Tampilkan elemen yang sesuai dengan filter
+    $(".box-cards-blog .card" + filterValue).show();
+  }
+});
 
-    // Loop melalui semua kartu dan tambahkan atau hapus kelas "hide"
-    filterableCards.forEach(card => {
-        card.classList.add("hide");
+$(".button-group .button-filter").on("click", function () {
+  $(".button-group .button-filter").removeClass("active");
+  $(this).addClass("active");
 
-        // Jika kategori kartu cocok dengan kategori tombol atau tombol "All" dipilih
-        if (card.dataset.name === e.currentTarget.dataset.name || e.currentTarget.dataset.name === "all") {
-            card.classList.remove("hide");
-        }
-    });
-};
-
-// Tambahkan event listener ke setiap tombol filter
-filterButtons.forEach(button => button.addEventListener("click", filterCards));
+  var value = $(this).attr("data-filter");
+  $galleryContainer.isotope({
+    filter: value,
+  });
+});

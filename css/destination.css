@@ -37,35 +37,43 @@
 }
 
 /* ============== WISATA CARD ============== */
-.filter{
-  position: relative;
-  width: 100%;
-  margin: 50px auto;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
+.button-group {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.filter button{
+.button-group .button-filter {
+  display: inline-block;
   padding: 10px 20px;
-  font-size: 18px;
-  background: #fff;
+  margin: 5px;
+  background-color: #c8d1d8;
+  color: #222;
+  font-style: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
+  outline: none;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.filter button.active{
-  background: #222;
-  color: #fff;
+.button-group .button-filter.active {
+  background-color: #222;
+  color: #c8d1d8;
+}
+
+.button-group .button-filter:hover {
+  background-color: #222;
+  color: #c8d1d8;
 }
 
 .wisata {
-  padding: 0px;
+  padding: 30px 8%;
   font-size: 14px;
   margin: 0px;
+  width: 100%;
 }
 
 .box-cards-blog {
@@ -80,10 +88,6 @@
   background-color: grey;
   transition: box-shadow 0.3s ease;
   border-radius: 20px;
-}
-
-.card.hide{
-  display: none;
 }
 
 .card:hover {
@@ -124,6 +128,7 @@
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
 .card .card-top {
   display: block;
   text-decoration: none;
@@ -168,8 +173,9 @@
 .box-cards-blog.-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 13px;
 }
+
 .box-cards-blog.-grid .card {
   width: calc(33.33333% - 10px);
   display: block;
@@ -192,86 +198,18 @@
   margin-top: 1rem;
 }
 
-.tabs {
-  text-align: center;
-  max-width: 200px;
-  margin: auto;
-  width: 100%;
-  display: flex;
-  margin-top: 20px;
-  justify-content: space-between;
-}
-.tabs .tab {
-  width: calc(50% - 5px);
-  text-align: center;
-  padding: 7px 10px;
-  border: 1px solid #d9d9d9;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.tabs .tab:hover {
-  background-color: #f5f5f5;
-}
-.tabs .tab.active {
-  background-color: #007ae9;
-  color: #fff;
-  border-color: #007ae9;
-}
-
-.pagination-product {
-  text-align: center;
-  margin: 30px 30px 60px;
-  user-select: none;
-  justify-content: center;
-}
-
-.pagination-product li {
-  display: inline-block;
-  margin: 5px;
-  box-shadow: 0 5px 25px rgb(1 1 1/10%);
-}
-
-.pagination-product li a {
-  color: #222;
-  text-decoration: none;
-  font-size: 1.2em;
-  line-height: 45px;
-}
-
-.previous-page,
-.next-page {
-  background: #b2917b;
-  width: 80px;
-  border-radius: 45px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.previous-page:hover {
-  transform: translateX(-5px);
-}
-
-.next-page:hover {
-  transform: translateX(5px);
-}
-
-.current-page,
-.dots-page {
-  background: #ccc;
-  width: 45px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.disable {
-  background-color: #ccc;
-}
-
-.active-page {
-  background-color: #b98461;
-}
-
 /*Responsive*/
+@media (max-width: 420px) {
+  .button-group .button-filter {
+    padding: 5px 5px;
+  }
+
+  .sub-header h1 {
+    padding-top: 160px;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 991px) {
   .box-cards-blog.-grid {
     display: block;
@@ -290,6 +228,11 @@
 }
 
 @media (max-width: 768px) {
+  .sub-header h1 {
+    padding-top: 160px;
+    font-size: 1.5rem;
+  }
+  
   .box-cards-blog {
     padding: 20px;
   }

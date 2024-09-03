@@ -1,0 +1,135 @@
+.oleh-oleh {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 11rem;
+}
+
+.container-oleh2 {
+  margin-top: 50px;
+}
+
+.blog-spot {
+  width: 100%;
+  max-width: 98rem;
+  padding: 3rem;
+  background-color: #dbf4ff21;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin: 10px 10px 20px 10px;
+}
+
+.blog-spot_img {
+  min-width: 30rem;
+  max-width: 30rem;
+  height: 20rem;
+  transform: translateX(-5rem);
+  position: relative;
+}
+
+.blog-spot_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.blog-spot_img img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.5);
+}
+
+.blog-spot_text {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.blog-spot_cta {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 550;
+  color: #fff;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  background: linear-gradient(to right, #121212 0%, #484848 85%);
+}
+
+.blog-spot_cta:hover {
+  background: linear-gradient(to right, #525151 0%, #e5e3e3 85%);
+  color: black;
+}
+
+.oleh-oleh .link-page{
+    text-decoration: none;
+    color: white;
+}
+
+/* ========= RESPONSIVE ========= */
+@media screen and (max-width: 320px) {
+  .container-oleh2 {
+    margin: 50px;
+  }
+
+  .oleh-oleh {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10rem;
+  }
+
+  .blog-spot_date span {
+    font-size: 10px;
+  }
+
+  .blog-spot_text {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 13px;
+  }
+
+  .blog-spot_title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .blog-spot_img {
+    min-width: 15rem;
+    max-width: 30rem;
+    height: 11rem;
+    transform: translateX(0rem);
+    position: relative;
+  }
+
+  .blog-spot_date span {
+    font-size: 10px;
+  }
+
+  .blog-spot {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .blog-spot_img {
+    transform: translateX(0);
+  }
+
+  .blog-spot {
+    flex-direction: column;
+    margin: 10px 0 15px 0;
+  }
+}
