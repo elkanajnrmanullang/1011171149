@@ -87,3 +87,29 @@ $(".button-group .button-filter").on("click", function () {
     filter: value,
   });
 });
+
+//FILTER PAGE AKOMODASI
+$(".button-group").on("click", ".button-filter", function () {
+  var filterValue = $(this).attr("data-filter");
+
+  // Jika filterValue adalah "*", tampilkan semua elemen
+  if (filterValue === "*") {
+    $(".cards .card").show();
+  } else {
+    // Sembunyikan semua elemen
+    $(".cards .card").hide();
+
+    // Tampilkan elemen yang sesuai dengan filter
+    $(".cards .card" + filterValue).show();
+  }
+});
+
+$(".button-group .button-filter").on("click", function () {
+  $(".button-group .button-filter").removeClass("active");
+  $(this).addClass("active");
+
+  var value = $(this).attr("data-filter");
+  $galleryContainer.isotope({
+    filter: value,
+  });
+});
