@@ -66,14 +66,11 @@ var swiper = new Swiper(".slide-container-dst", {
 $(".button-group").on("click", ".button-filter", function () {
   var filterValue = $(this).attr("data-filter");
 
-  // Jika filterValue adalah "*", tampilkan semua elemen
   if (filterValue === "*") {
     $(".box-cards-blog .card").show();
   } else {
-    // Sembunyikan semua elemen
     $(".box-cards-blog .card").hide();
 
-    // Tampilkan elemen yang sesuai dengan filter
     $(".box-cards-blog .card" + filterValue).show();
   }
 });
@@ -92,14 +89,11 @@ $(".button-group .button-filter").on("click", function () {
 $(".button-group").on("click", ".button-filter", function () {
   var filterValue = $(this).attr("data-filter");
 
-  // Jika filterValue adalah "*", tampilkan semua elemen
   if (filterValue === "*") {
     $(".cards .card").show();
   } else {
-    // Sembunyikan semua elemen
     $(".cards .card").hide();
 
-    // Tampilkan elemen yang sesuai dengan filter
     $(".cards .card" + filterValue).show();
   }
 });
