@@ -120,13 +120,15 @@
   color: #081f32;
   text-decoration: none;
 }
-.card .card-title > a:hover {
-  color: #007ae9;
-}
 .card .card-top {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.card .card-desc{
+  text-align: justify;
+  font-size: 14px;
 }
 
 .card .card-top {

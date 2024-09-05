@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #17153B;
   color: #fff;
 }
 
@@ -67,7 +67,7 @@ header .nav-bar {
   display: none;
 }
 
-.nav-bar .logo img{
+.nav-bar .logo img {
   color: var(--white-color);
   width: 170px;
   font-weight: 600;
@@ -202,7 +202,7 @@ header .nav-bar {
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
-.button a{
+.button a {
   text-decoration: none;
   color: #fff;
 }
@@ -285,7 +285,6 @@ header .nav-bar {
   align-items: center;
   color: #fff;
   margin: auto;
-  background-color: rgb(0, 0, 0);
 }
 
 .title-about h1 {
@@ -337,10 +336,10 @@ header .nav-bar {
   height: 100%;
   background: linear-gradient(
     180deg,
-    hsl(0, 0%, 0%) 18%,
+    #17153B 15%,
     hsla(0, 0%, 0%, 0) 35%,
     hsla(0, 0%, 0%, 0) 80%,
-    hsl(0, 0%, 0%) 100%
+    #17153B 100%
   );
 }
 
@@ -352,7 +351,6 @@ header .nav-bar {
 /* =========== DESTINATION ========== */
 .destination {
   margin: 50px 0 0 0;
-  background: #0108;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -441,7 +439,7 @@ header .nav-bar {
   transform: scaleX(1);
 }
 
-.button-dst a{
+.button-dst a {
   text-decoration: none;
   color: #fff;
 }
@@ -572,7 +570,7 @@ header .nav-bar {
   cursor: pointer;
 }
 
-.button-event a{
+.button-event a {
   text-decoration: none;
   color: #fff;
 }
@@ -890,10 +888,10 @@ header .nav-bar {
     height: 100%;
     background: linear-gradient(
       180deg,
-      hsl(0, 0%, 0%) 8%,
-      hsla(0, 0%, 0%, 0) 35%,
-      hsla(0, 0%, 0%, 0) 39%,
-      hsl(0, 0%, 0%) 95%
+      #17153B 8%,
+      #17153B 35%,
+      #17153B 39%,
+      #17153B 95%
     );
   }
 
@@ -1085,7 +1083,7 @@ a {
   margin-right: 15px;
 }
 
-.wrapper-footer .footer-widget .logo img{
+.wrapper-footer .footer-widget .logo img {
   width: 170px;
   margin-bottom: 30px;
   vertical-align: middle;

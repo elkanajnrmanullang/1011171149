@@ -6,7 +6,6 @@
 
 .details-akom {
   font-family: sans-serif;
-  background: #000000;
   margin-top: 100px;
   margin-bottom: 5%;
 }
@@ -34,7 +33,7 @@
 .container-blog {
   max-width: 75%;
   margin: auto;
-  height: 90vh;
+  height: 100%;
   color: #000;
   background: rgb(94, 94, 94);
   box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
@@ -214,7 +213,7 @@ button {
   .container-blog {
     max-width: 90%;
     margin: auto;
-    height: auto;
+    height: 100%;
   }
 
   .left-blog,
