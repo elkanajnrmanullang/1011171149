@@ -1,20 +1,20 @@
-.sub-header {
+.sub-header-dst {
   height: 50vh;
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(/assets/photo/bg_event.png);
+    url(/assets/photo/sub-header_wisata.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
   color: #fff;
 }
 
-.sub-header h1 {
+.sub-header-dst h1 {
   padding-top: 160px;
   font-size: 3rem;
 }
 
-.sub-header p {
+.sub-header-dst p {
   font-size: 14px;
   font-style: italic;
 }
@@ -206,7 +206,7 @@
     padding: 5px 5px;
   }
 
-  .sub-header h1 {
+  .sub-header-dst h1 {
     padding-top: 160px;
     font-size: 1rem;
   }
@@ -230,7 +230,7 @@
 }
 
 @media (max-width: 768px) {
-  .sub-header h1 {
+  .sub-header-dst h1 {
     padding-top: 160px;
     font-size: 1.5rem;
   }

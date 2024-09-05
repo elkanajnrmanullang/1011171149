@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: #17153B;
+  background-color: #17153b;
   color: #fff;
 }
 
@@ -336,10 +336,10 @@ header .nav-bar {
   height: 100%;
   background: linear-gradient(
     180deg,
-    #17153B 15%,
+    #17153b 15%,
     hsla(0, 0%, 0%, 0) 35%,
     hsla(0, 0%, 0%, 0) 80%,
-    #17153B 100%
+    #17153b 100%
   );
 }
 
@@ -888,10 +888,10 @@ header .nav-bar {
     height: 100%;
     background: linear-gradient(
       180deg,
-      #17153B 8%,
-      #17153B 35%,
-      #17153B 39%,
-      #17153B 95%
+      #17153b 8%,
+      #17153b 35%,
+      #17153b 39%,
+      #17153b 95%
     );
   }
 
@@ -1025,8 +1025,10 @@ header .nav-bar {
   height: 100%;
   background: linear-gradient(
     180deg,
-    hsla(0, 0%, 0%, 0) 97%,
-    hsl(0, 0%, 0%) 102%
+    #17153b 15%,
+    hsla(0, 0%, 0%, 0) 35%,
+    hsla(0, 0%, 0%, 0) 80%,
+    #17153b 120%
   );
 }
 
