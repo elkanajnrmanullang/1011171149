@@ -4,29 +4,28 @@
   box-sizing: border-box;
 }
 
-.details-akom {
+.details-oleh {
   font-family: sans-serif;
-  background: #000000;
   margin-top: 100px;
   margin-bottom: 5%;
 }
 
-.title-blog_akom {
+.title-blog_oleh {
   max-width: 75%;
   margin: 10px auto 20px auto;
 }
 
-.title-blog_akom h1 {
+.title-blog_oleh h1 {
   font-style: 40px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.title-blog_akom .date_event {
+.title-blog_oleh .date_event {
   font-style: italic;
 }
 
-.title-blog_akom .link-pages a {
+.title-blog_oleh .link-pages a {
   color: #5a5959;
   letter-spacing: 2px;
 }
@@ -34,7 +33,7 @@
 .container-blog {
   max-width: 75%;
   margin: auto;
-  height: 90vh;
+  height: 100%;
   color: #000;
   background: rgb(94, 94, 94);
   box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
@@ -268,21 +267,21 @@ button {
     width: 100%;
   }
 
-  .title-blog_akom {
+  .title-blog_oleh {
     max-width: 75%;
     margin: 10px 100px 20px auto;
   }
 
-  .title-blog_akom h1 {
+  .title-blog_oleh h1 {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
 
-  .title-blog_akom .date_event {
+  .title-blog_oleh .date_event {
     font-style: italic;
   }
 
-  .title-blog_akom .link-pages a {
+  .title-blog_oleh .link-pages a {
     color: #5a5959;
     letter-spacing: 2px;
   }

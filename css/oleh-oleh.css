@@ -1,3 +1,36 @@
+/* ============= SUB HEADER ============ */
+.sub-header-oleh {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/assets/photo/sub-header_oleh2.png);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.sub-header-oleh h1 {
+  padding-top: 160px;
+  font-size: 3rem;
+}
+
+.sub-header-oleh p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .sub-header-oleh h1 {
+    font-size: 27px;
+  }
+
+  .sub-header-oleh p {
+    font-size: 10px;
+  }
+}
+
+/* =========== MAIN ========== */
 .oleh-oleh {
   width: 100%;
   display: flex;
