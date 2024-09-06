@@ -85,7 +85,7 @@
 .card {
   margin-bottom: 20px;
   display: flex;
-  background-color: grey;
+  background-color: rgb(165, 165, 165);
   transition: box-shadow 0.3s ease;
   border-radius: 20px;
 }
@@ -163,7 +163,7 @@
   display: block;
   padding: 5px 10px;
   text-decoration: none;
-  color: #007ae9;
+  color: #000000;
   font-weight: 600;
   transition: transform 0.3s ease;
 }

@@ -13,6 +13,7 @@
 .title-blog_akom {
   max-width: 75%;
   margin: 10px auto 20px auto;
+  color: #000;
 }
 
 .title-blog_akom h1 {
@@ -26,7 +27,7 @@
 }
 
 .title-blog_akom .link-pages a {
-  color: #5a5959;
+  color: #000000;
   letter-spacing: 2px;
 }
 
@@ -181,6 +182,7 @@ button {
     text-align: center;
     margin: 20px;
     font-size: 2.5rem;
+    color: black;
 }
 
 .blog-wisata h3{
@@ -189,6 +191,7 @@ button {
 
 .blog-wisata p{
     text-align: justify;
+    color: black;
 }
 
 
